@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* :root {
+  font-size: 16px;
+  background-color: gray;
+} */
+
+body {
+  background-image: url(../img/bg_001.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topPage {
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+/* .topLeftBanner {
+  background-image: url(/img/logo_001.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+} */
+
+.image-logo {
+  width: 8rem;
+  margin: 1rem;
+}
+
+.menu1 li {
+  font-size: x-small;
+  color: white;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.contentMain {
+  border: 2px red;
+  /* width: 60vw; */
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+.boxLeft {
+  border: 1px rgb(10, 2, 112);
+  width: 15rem;
+  color: white;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxLeftContent,
+.buttons {
+  margin: 0.5rem 0;
+}
+
+.boxRight {
+  border: rgb(0, 187, 87);
+  margin: 1rem;
+  display: inline-flex;
+  position: relative;
+}
+
+.phone1,
+.phone2 {
+  width: 10rem;
+}
+
+.phone1 {
+  /* position: absolute; */
+  position: absolute;
+  right: -1rem;
+  top: -2rem;
+}
+
+.phone2 {
+  position: relative;
+  top: -1.5rem;
+  right: 2rem;
+}
+
+p {
+  font-size: xx-small;
+}
+
+.buttons {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.button1,
+.button2 {
+  width: 7rem;
+  height: 1.8rem;
+  border: transparent;
+  color: white;
+}
+
+.button1 {
+  background-color: rgb(0, 187, 87);
+}
+
+.button2 {
+  background-color: rgb(98, 98, 250);
+}
