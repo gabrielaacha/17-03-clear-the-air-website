@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  font-size: 16px;
-  background-color: gray;
-} */
-
 body {
   background-image: url(../img/bg_001.jpg);
   background-size: cover;
@@ -16,19 +11,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topPage {
+.everything {
+  border: 1px crimson solid;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  /* flex-wrap: wrap; */
-  align-items: center;
+  flex-direction: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-/* .topLeftBanner {
-  background-image: url(/img/logo_001.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 1rem;
-} */
+.topPage {
+  width: 70%;
+  border: 1px red solid;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .image-logo {
   width: 8rem;
@@ -43,21 +43,22 @@ body {
 }
 
 .contentMain {
-  border: 2px red;
-  /* width: 60vw; */
+  border: yellow 10px solid;
+  width: 70%;
   display: flex;
   justify-content: space-around;
-  margin: 2rem;
+  margin: 1rem;
+  align-items: center;
 }
 
 .boxLeft {
-  border: 1px rgb(10, 2, 112);
+  border: 1px rgb(10, 2, 112) solid;
+
   width: 15rem;
   color: white;
   font-style: normal;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .boxLeftContent,
@@ -66,6 +67,7 @@ body {
 }
 
 .boxRight {
+  background-color: blue;
   border: rgb(0, 187, 87);
   margin: 1rem;
   display: inline-flex;
@@ -78,15 +80,14 @@ body {
 }
 
 .phone1 {
-  /* position: absolute; */
   position: absolute;
-  right: -1rem;
-  top: -2rem;
+  right: 0rem;
+  top: 0rem;
 }
 
 .phone2 {
   position: relative;
-  top: -1.5rem;
+  top: 0.5rem;
   right: 2rem;
 }
 
