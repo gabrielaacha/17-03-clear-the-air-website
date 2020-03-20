@@ -48,6 +48,11 @@ body {
   flex-direction: row;
 }
 
+.menu1 .menu-btn:checked {
+  background: transparent;
+  border: transparent;
+}
+
 .contentMain {
   border: yellow 5px solid;
   width: 70%;
@@ -101,6 +106,8 @@ p {
   font-size: xx-small;
 }
 
+/*---------------------------------------------------*/
+
 .buttons {
   display: inline-flex;
   justify-content: space-between;
@@ -134,6 +141,7 @@ p {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    flex-direction: column-reverse;
     margin: 0.5rem;
     /* align-items: center; */
   }
@@ -153,6 +161,7 @@ p {
     display: flex;
     justify-content: right;
   }
+
   /*----------------phones-----------------------------*/
 
   .boxRight {
@@ -160,7 +169,7 @@ p {
     border: rgb(0, 187, 87);
     margin: 1rem;
     display: inline-flex;
-    position: relative;
+    /* position: relative; */
   }
 
   .phone1,
@@ -183,30 +192,32 @@ p {
 
   /*----- hamburger menu icon -----*/
   .menu1 .menu-icon {
+    /*only affecting the hamb menu icon*/
     cursor: pointer;
     display: inline-block;
     /* float: left; */
     padding: 30px 20px;
-    display: flex; /*hamburger menu palcement*/
-    justify-content: center; /*hamburger menu palcement*/
-    position: relative;
-    user-select: none;
-    outline: none;
+    display: flex; /*hamburger menu placement */
+    /* flex-direction: column; */
+    justify-content: center; /*hamburger menu placement */
+    /* position: relative; */
+    /* user-select: none; */
+    /* outline: none; */
 
-    &:focus {
+    /* &:focus {
       border: 1px dotted $med-light-grey-color;
       margin: -1px;
       outline: none;
-    }
+    } */
   }
 
   .menu1 .menu-icon .navicon {
     background: #333;
     display: block;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 18px;
+    height: 2px; /*cross size*/
+    position: relative; /*cross position*/
+    /* transition: background 0.2s ease-out; */
+    width: 18px; /*cross size*/
   }
 
   .menu1 .menu-icon .navicon:before,
@@ -221,11 +232,11 @@ p {
   }
 
   .menu1 .menu-icon .navicon:before {
-    top: 5px;
+    top: 5px; /*position of the hamb. menu lines in relation to one another*/
   }
 
   .menu1 .menu-icon .navicon:after {
-    top: -5px;
+    top: -5px; /*position of the hamb. menu lines in relation to one another*/
   }
 
   /*----- menu btn (triggers opening and closing of hamb. menu) -----*/
@@ -235,17 +246,17 @@ p {
 
   .menu1 .menu-btn:checked ~ .menu-outer .menu,
   .menu1 .menu-btn:checked ~ .menu-outer .hq-nav {
-    max-height: 100%;
+    /* max-height: 100%; */
   }
 
   .menu1 .menu-btn:checked ~ .menu-outer {
     max-height: 75vh;
-    box-shadow: 0px 2px 4px 0 rgba(30, 31, 33, 0.5);
+    /* box-shadow: 0px 2px 4px 0 rgba(30, 31, 33, 0.5); */
   }
 
   .menu-outer {
-    clear: both;
-    overflow-x: auto;
+    clear: both; /*no idea*/
+    overflow-x: auto; /*makes space when the menu opens so it does not overlap*/
     max-height: 0;
   }
 
@@ -255,11 +266,12 @@ p {
 
   .menu1 .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
+    /*this is creating the x*/
   }
 
   .menu1 .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
-  }
+  } /*this is creating the x*/
 
   .menu1 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
   .menu1 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
