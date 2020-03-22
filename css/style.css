@@ -156,10 +156,11 @@ p {
     flex-direction: column;
   }
 
-  .boxLeft p,
-  .boxLeft h3 {
+  .contentMain p,
+  .contentMain h3 {
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    text-align: center;
   }
 
   /*----------------phones-----------------------------*/
@@ -192,7 +193,7 @@ p {
 
   /*----- hamburger menu icon -----*/
   .menu1 .menu-icon {
-    /*only affecting the hamb menu icon*/
+    /*only affecting the hamb. menu icon*/
     cursor: pointer;
     display: inline-block;
     /* float: left; */
@@ -244,9 +245,19 @@ p {
     display: none;
   }
 
+  /*area with the*/
   .menu1 .menu-btn:checked ~ .menu-outer .menu,
   .menu1 .menu-btn:checked ~ .menu-outer .hq-nav {
     /* max-height: 100%; */
+    background-color: orangered;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-outer .main-nav-item {
+    color: green;
+    display: flex;
+    justify-content: center;
   }
 
   .menu1 .menu-btn:checked ~ .menu-outer {
